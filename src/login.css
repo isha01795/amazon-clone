@@ -1,0 +1,58 @@
+.login{
+background-color: white;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.login_logo{
+    margin: auto;
+    object-fit: contain;
+    width: 200px;
+    
+}
+
+.login_container{
+    border: 1px solid lightgray;
+    height: 380px;
+    padding-left: 20px;
+    width: 60vw;
+}
+
+.sign_in_title{
+    margin: 10px auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.login_input{
+    width: 90%;
+    height: 30px;
+}
+.create_account_button,.sign_in_button{
+    display: block;
+    width: 90%;
+    margin: 15px 0;
+    height: 35px;
+    font-size: 15px;
+}
+
+.login_input:focus{
+    outline:none;
+    border:1px solid orange;
+    box-shadow: 0.5px 0.5px 1px 2px rgb(235, 190, 108);
+}
+ .sign_in_button{
+ 
+        background: #f0c14b;
+        border: 1px solid rgb(95, 95, 95);
+ 
+    }
+ 
+    .sign_in_button:hover{
+        background: #dbaf3f;
+     
+    }
