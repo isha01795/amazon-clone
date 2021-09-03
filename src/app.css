@@ -1,0 +1,10 @@
+.body{
+  /* width: calc(100px + 98vw); */
+  width: 1360px;
+}
+
+@media (max-width:300px) {
+    .body{
+        width: 500px;
+      }
+}

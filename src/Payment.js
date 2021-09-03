@@ -59,7 +59,8 @@ function Payment() {
                 
              <div className="payment_method_buttons">
                 <button className="payment_method_button">Pay on delievery </button>
-         <Link to="/onlinepay">  <button className="payment_method_button">Pay Online</button></Link> 
+                <a href=" https://rzp.io/l/H00VZ9vRc">          <button className="payment_method_button">Pay Online</button></a>
+
          </div>  
          </div>
             </div>

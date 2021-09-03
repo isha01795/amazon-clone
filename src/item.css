@@ -1,9 +1,7 @@
 .item_container{
-    /* margin: auto; */
     background-color: white;
     display: flex;
     flex-direction: column;
-    /* justify-content:flex-end; */
 }
 
 .item_info{

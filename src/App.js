@@ -5,13 +5,13 @@ import Item from './Item';
 import Payment from './Payment'
 import Home from './Home';
 import Cart from './Cart';
-import Onlinepay from './Onlinepay';
 import Login from './Login';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Subcategory from './Subcategory';
 
 function App() {
     return (
+        <div className="body">
         <Router>
         <div className="app">
         
@@ -25,9 +25,6 @@ function App() {
         <Route path="/category">
         <Subcategory/>
 
-        </Route>
-        <Route path="/onlinepay">
-        <Onlinepay/>
 
         </Route>
         <Route path="/cart">
@@ -42,10 +39,7 @@ function App() {
 
         <Route  exact path= "/item" component={Item}
          />
-        {/* { <Route path="/item">
-        <Item/>
-
-        </Route> } */}
+      
 
         <Route path="/">
         <Home/>
@@ -55,6 +49,7 @@ function App() {
        </Switch>
         </div>
         </Router>
+        </div>
     )
 }
 
