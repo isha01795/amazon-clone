@@ -1,8 +1,34 @@
-import React from 'react'
+import React , {useState} from 'react'
 import './login.css'
 import {Link} from 'react-router-dom';
+import {useStateValue} from './State';
+
 
 function Login() {
+    const [{user}, dispatch] = useStateValue();
+    const [email, setEmail] = useState("");
+// console.log(user);
+
+   const showEmail =(e) =>{
+   setEmail(e.target.value);
+   }
+
+    const setUser = () => {
+        const username = email;
+   console.log(username);
+dispatch({
+      type: 'ADD_USER',
+      userName: 
+          username,
+      
+})
+// console.log(userName);
+
+
+    }
+
+
+
     return (
         <div className="login">
         <Link to ="/"> 
@@ -15,14 +41,14 @@ function Login() {
           </div>
             <form>
                 <h4>E-mail</h4>
-                <input type="text" className="login_input" />
+                <input type="email" className="login_input" value={email} onChange={showEmail} readOnly  />
 
                 <h4>Password</h4>
-                <input type="password" className="login_input" />
-                <button className="sign_in_button">Sign In</button>
+                <input type="password" className="login_input"  readOnly />
+                <button className="sign_in_button" onClick={setUser} >Sign In</button>
             </form>
             <p>By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</p>
-            <button className="create_account_button">Create your Amazon account</button>
+           <Link to="/signup"> <button className="create_account_button">Create your Amazon account</button> </Link>
         </div>
             
         </div>

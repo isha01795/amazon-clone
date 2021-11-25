@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./cart.css";
 import { useStateValue } from "./State";
@@ -11,8 +12,8 @@ function Cart() {
     <div className="cart">
       <div className="cart_left">
         <div className="cart_title">
-          {" "}
-          <h1>Your Shopping Basket</h1>{" "}
+        
+          <h1>Your Shopping Basket</h1>
           <img src="./cart.png" alt="" className="cart_image" />
         </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './cartProduct.css';
 import { useStateValue } from './State';
 
-function CartProduct({id,title,description,price,image,rating}) {
+function CartProduct({id,title,price,image,rating}) {
     const[{basket}, dispatch] = useStateValue();
 const removeFromBasket= () => {
     dispatch({
@@ -30,7 +30,7 @@ const removeFromBasket= () => {
            </div> 
         
         </div>
-        <hr />
+        <hr style={{width:"100%"}}/>
         </>
     )
 }

@@ -48,7 +48,7 @@ const Item = (props) =>
         
             <button onClick={addToBasket} >Add to cart</button>
    
-           <Link to="./cart"><div> <button onClick={addToBasket} id="buy_button" >Buy Now</button> </div> </Link>
+           <Link to="./cart"> <button onClick={addToBasket} id="buy_button" >Buy Now</button> </Link>
            
         </div>
     )

@@ -7,31 +7,42 @@ import Home from './Home';
 import Cart from './Cart';
 import Login from './Login';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Subcategory from './Subcategory';
+import Subheader from './Subheader';
+import Footer from './Footer';
+import Location from './Location';
+import Signup from './Signup';
 
 function App() {
     return (
         <div className="body">
         <Router>
         <div className="app">
-        
         <Header/>
+        <Subheader/>
+      
+    
+
         <Switch>
-        <Route path="/login">
+        <Route  exact  path="/login">
         <Login/>
 
         </Route>
 
-        <Route path="/category">
-        <Subcategory/>
-
+        <Route  exact  path="/signup">
+        <Signup/>
 
         </Route>
-        <Route path="/cart">
+        <Route exact  path="/location">
+        <Location/>
+
+        </Route>
+
+ 
+        <Route  exact path="/cart">
         <Cart/>
 
         </Route>
-        <Route path="/payment">
+        <Route exact  path="/payment">
         <Payment/>
 
         </Route>
@@ -39,10 +50,11 @@ function App() {
 
         <Route  exact path= "/item" component={Item}
          />
-      
 
-        <Route path="/">
-        <Home/>
+
+
+        <Route  exact path="/">
+        <Footer/>
         </Route>
 
 

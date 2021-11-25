@@ -1,0 +1,27 @@
+.subheader_container{
+    background-color:  #243131;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.subheader_option{
+    margin:0 5px ;
+    padding:4px 8px ;
+    border: 1px solid #243131;
+    cursor: pointer;
+    /* position: relative; */
+   
+}
+
+.subheader_option:hover{
+   border: 1px solid white;
+   border-radius: 2px;
+}
+
+.product_items{
+    display: flex;
+    flex-flow: row wrap;
+}

@@ -15,7 +15,7 @@ function Payment() {
     return (
 
         <div className="payment">
-        <h1>Checkout ( <Link to="/cart">{basket?.length} items</Link> ) </h1>
+        <h1>Checkout ( <Link to="/cart"> {basket?.length} items</Link> ) </h1>
 
         <div className="payment_container">
             <div className="payment_section">
@@ -37,7 +37,7 @@ function Payment() {
                 </div>
                 <div className="payment_items">
                 {basket.map(item => (
-        <CartProduct id="payment_product"
+        <CartProduct id="payment_product" 
           id ={ item.id}
         title={ item.title} 
         description={ item.description}

@@ -4,10 +4,8 @@
 }
 
 body{
-  background-color: rgb(234,237,237);
+  background-color: rgb(229, 231, 231) !important;
   margin: 0%;
-overflow-x: hidden;
-  /* -webkit-font-smoothing:antialiased; */
-  /* -moz-osx-font-smoothing:grayscale; */
+  overflow-x: hidden;
 }
 

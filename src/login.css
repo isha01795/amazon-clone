@@ -1,6 +1,5 @@
 .login{
 background-color: white;
-height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -16,9 +15,8 @@ align-items: center;
 
 .login_container{
     border: 1px solid lightgray;
-    height: 380px;
     padding-left: 20px;
-    width: 60vw;
+    width: 500px;
 }
 
 .sign_in_title{
@@ -55,4 +53,20 @@ align-items: center;
     .sign_in_button:hover{
         background: #dbaf3f;
      
+    }
+
+
+    /* signup */
+
+    .c_password_block{
+        position: relative;
+
+    }
+
+   
+
+    .visibility_icon{
+        position: absolute ;
+        right: 55px;
+        top: 37px;
     }

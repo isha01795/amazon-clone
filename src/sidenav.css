@@ -1,0 +1,89 @@
+#sidenav_container {
+  background-color: rgba(34, 34, 34, 0.527);
+
+  width: 1360px;
+  height: 100%;
+
+  z-index: 100;
+  position: fixed;
+  color: black;
+  top: 0;
+  left: 0;
+
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+#sidenav_container nav {
+  background-color: white;
+  width: 25rem;
+  height: 100%;
+  overflow: auto;
+  /* position: relative; */
+ 
+}
+
+.sidenav_signin {
+  background-color: rgb(15, 16, 26);
+  width: 25rem;
+  color: white;
+  line-height: 50px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.show {
+  transform: translate3d(0px, 0, 0);
+  overflow: hidden;
+}
+
+.hide {
+  transform: translate3d(-1360px, 0, 0);
+}
+
+.close_icon {
+  position: absolute;
+  top: -0.6rem;
+  left: 25rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.sidenav_options{
+    border-bottom: 1px solid rgb(199, 198, 198);
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.sidenav_options li{
+  list-style: none;
+  padding:0.7rem 3rem;
+  margin-left: -3.5rem;
+  cursor: pointer;
+
+}
+
+.sidenav_options li:hover{
+    background-color: rgba(78, 78, 78, 0.281);
+}
+
+/* @media (max-width:660px) {
+   
+
+  
+#sidenav_container nav {
+  width: 14rem;
+ 
+}
+
+.sidenav_signin {
+  width: 14rem;
+
+}
+
+.close_icon {
+
+  left: 14rem;
+
+}
+} */

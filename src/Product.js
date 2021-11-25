@@ -1,6 +1,7 @@
 import React from 'react';
 import './product.css';
 import { useStateValue } from './State';
+// import { Link } from "react-router-dom";
 
 
 function Product({id,title,description,price,image,rating}) {
@@ -22,7 +23,9 @@ dispatch({
  }
 
     return (
+    
         <div className="product">
+  
         <div className="product_info">
         <div><h3>{title}</h3></div>
             <div className="product_description">{description}</div>
