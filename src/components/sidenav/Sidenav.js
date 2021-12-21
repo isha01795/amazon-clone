@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React from 'react';
 import './sidenav.css';
 import CloseIcon from '@material-ui/icons/Close';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -14,7 +14,7 @@ function Sidenav(props ) {
           <div id="sidenav_container" className= {props.clas}  >
          <Link to="./login" onClick={props.close}  style={{textDecoration:'none'}}> <div className="sidenav_signin">
             <AccountCircleIcon style={{fontSize:'2.5rem', marginRight:"5px"}}/>
-            {user == "Sign in" ?
+            {user === "Sign in" ?
             <Link to="/Login" style={{ textDecoration: "none" }}>
             Hello,{user}
             </Link>:

@@ -1,6 +1,6 @@
 import React , {useState , useEffect}from 'react';
 import {GoogleMap, LoadScript}  from '@react-google-maps/api';
-
+// import REACT_APP_API_KEY from '../../.e'
 
 function Location() {
 
@@ -32,8 +32,10 @@ function Location() {
     return (
         <div>
 
+
+        
         <LoadScript
-        googleMapsApiKey='AIzaSyD9IGZHk8y52cQoY67qnKSCgkeV988e1lw' >
+        googleMapsApiKey= "AIzaSyD9IGZHk8y52cQoY67qnKSCgkeV988e1lw"> 
 
             <GoogleMap mapContainerStyle={mapStyles}
              zoom={13}

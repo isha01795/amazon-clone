@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./subheader.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import Sidenav from "../sidenav/Sidenav";

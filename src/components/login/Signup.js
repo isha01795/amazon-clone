@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
-import { useStateValue } from "../../State";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 
 function Login() {
-  const [{ user }, dispatch] = useStateValue();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [state, setState] = useState(false);
@@ -29,15 +27,7 @@ function Login() {
     }
   };
 
-  const setUser = () => {
-    const username = email;
-    console.log(username);
-    dispatch({
-      type: "ADD_USER",
-      userName: username,
-    });
-    // console.log(userName);
-  };
+
 
   return (
     <div className="login">
@@ -90,7 +80,7 @@ function Login() {
               />
             )}
           </div>
-          <button className="sign_in_button" onClick={setUser}>
+          <button className="sign_in_button">
             Sign Up
           </button>
         </form>
