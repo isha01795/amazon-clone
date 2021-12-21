@@ -1,7 +1,9 @@
 export const initialState = {
     basket: [],
-    user:null,
+    user:"Sign in",
+    
 }
+
 
 export const getBasketTotal = (basket) => 
   basket?.reduce((amount, item) => item.price + amount, 0);
@@ -32,12 +34,21 @@ case "REMOVE_FROM_BASKET":
     }
 
     case "ADD_USER":
+        if(action.user){
+     console.log(action.user)
+           
+        }
+        else{
+            console.log(null);
+        }
         return{
-           ...state,
-          user:action.userName, 
+        //   ...state,
+          user:action.user, 
+        
+          
         };
     
-
+        
         default:
             return state;
     }

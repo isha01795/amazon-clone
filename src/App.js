@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from './Header';
+import Header from './components/header/Header';
 import './app.css';
-import Item from './Item';
-import Payment from './Payment'
-import Home from './Home';
-import Cart from './Cart';
-import Login from './Login';
+import Item from './components/item/Item';
+import Payment from './components/payment/Payment'
+import Cart from './components/cart/Cart';
+import Login from './components/login/Login';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Subheader from './Subheader';
-import Footer from './Footer';
-import Location from './Location';
-import Signup from './Signup';
+import Subheader from './components/subheader/Subheader';
+import Footer from './components/footer/Footer';
+import Location from './components/Location';
+import Signup from './components/login/Signup';
+import Logout from './components/login/Logout';
 
 function App() {
     return (
@@ -18,7 +18,6 @@ function App() {
         <Router>
         <div className="app">
         <Header/>
-        <Subheader/>
       
     
 
@@ -30,6 +29,11 @@ function App() {
 
         <Route  exact  path="/signup">
         <Signup/>
+
+        </Route>
+      
+        <Route exact  path="/logout">
+        <Logout/>
 
         </Route>
         <Route exact  path="/location">
@@ -48,17 +52,21 @@ function App() {
         </Route>
 
 
-        <Route  exact path= "/item" component={Item}
-         />
+        <Route  exact path= "/item" component={Item}/>
+         {/* <Item/> */}
+         {/* </Route> */}
+
+        <Route  exact path="/amazon-clone">
+
+<Subheader/>
 
 
-
-        <Route  exact path="/">
-        <Footer/>
         </Route>
 
 
        </Switch>
+       <Footer/>
+
         </div>
         </Router>
         </div>

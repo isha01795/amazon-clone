@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./searchbar.css";
-import Api from "./Api.json";
+import Api from "../../Api.json";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
-
 
 function Searchbar() {
   const [filterData, setFilterData] = useState([]);
@@ -28,7 +27,6 @@ function Searchbar() {
     setInput([]);
   };
 
- 
   return (
     <div>
       <div className="header_search">
@@ -53,10 +51,10 @@ function Searchbar() {
                 <Link
                   to={{
                     pathname: "/item",
-                    aboutprops: { product: {value} },
+                    aboutprops: { product: { value } },
                   }}
-                > 
-                  <a id="searchItem" target="_blank" onClick={clearInput} >
+                >
+                  <a id="searchItem" target="_blank" onClick={clearInput}>
                     {value.title}
                   </a>
                 </Link>
@@ -68,9 +66,6 @@ function Searchbar() {
       )}
     </div>
   );
-
-
- 
 }
 
 export default Searchbar;
