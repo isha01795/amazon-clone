@@ -1,6 +1,9 @@
 import React from "react";
 import "./product.css";
 import { useStateValue } from "../../State";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Product({ id, title, description, price, image, rating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -18,10 +21,18 @@ function Product({ id, title, description, price, image, rating }) {
         rating: rating,
       },
     });
+    toast.success(`${title} added to cart successfully!`, {
+      position: "top-right",
+      
+    
+      });
+
+    
+
   };
 
   return (
-    <div className="product">
+    <>    <div className="product">
       <div className="product_info">
         <div>
           <h3>{title}</h3>
@@ -44,6 +55,8 @@ function Product({ id, title, description, price, image, rating }) {
       </div>
       <button onClick={addToBasket}>Add to cart</button>
     </div>
+    </>
+
   );
 }
 

@@ -8,6 +8,7 @@ function Cart() {
   const [{ basket }, dispatch] = useStateValue();
 
   return (
+    <>
     <div className="cart">
       <div className="cart_left">
         <div className="cart_title">
@@ -30,6 +31,7 @@ function Cart() {
         <Subtotal />
       </div>
     </div>
+    </>
   );
 }
 

@@ -80,9 +80,10 @@ function Login() {
               />
             )}
           </div>
-          <button className="sign_in_button">
+      <Link to='./amazon-clone'>    <button className="sign_in_button">
             Sign Up
           </button>
+          </Link>
         </form>
         <p>
           By continuing, you agree to Amazon's Conditions of Use and Privacy

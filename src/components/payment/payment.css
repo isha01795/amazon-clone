@@ -53,14 +53,14 @@ h2{
 .payment_method_button:hover{
     background: #c3a558;
 }
+
+
 .payment_method_buttons{
     display: flex;
  
 }
 
-.payment_items{
-/* flex: 0.4; */
-}
+
 
 
 #payment_product{

@@ -1,6 +1,10 @@
 import React from "react";
 import "./cartProduct.css";
 import { useStateValue } from "../../State";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function CartProduct({ id, title, price, image, rating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -9,6 +13,9 @@ function CartProduct({ id, title, price, image, rating }) {
       type: "REMOVE_FROM_BASKET",
       id: id,
     });
+
+    toast.success(`${title} removed from cart successfully!`, {
+      position: "top-right"})
   };
 
   return (
@@ -27,6 +34,8 @@ function CartProduct({ id, title, price, image, rating }) {
         </div>
       </div>
       <hr style={{ width: "100%" }} />
+     <ToastContainer />
+
     </>
   );
 }

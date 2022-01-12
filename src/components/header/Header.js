@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./header.css";
 import Searchbar from "../searchbar/Searchbar";
 import { Link } from "react-router-dom";
@@ -9,6 +9,11 @@ import { useStateValue } from "../../State";
 
 function Header() {
   const [{ basket }, dispatch] = useStateValue();
+useEffect(() => {
+
+ 
+}, [])
+
   const [{ user }] = useStateValue();
 
   return (
@@ -34,14 +39,14 @@ function Header() {
         <div className="header_nav_option">
           <Searchbar />
         </div>
-        {user == "Sign in" ? (
+        {user === "Sign in" ? (
           <Link to="/Login" style={{ textDecoration: "none" }}>
             <div className="header_nav_option">
               {/* {  user?  <span className="header_nav_option_up">
                 Hello,{user} </span>  :  <span className="header_nav_option_up">
                 Hello,Sign in</span>  } */}
 
-              <span className="header_nav_option_up">Hello,{user} </span>
+              <span className="header_nav_option_up">Hello,Sign in </span>
 
               <div className="header_nav_sub_option">
                 <ArrowDropDownOutlinedIcon className="header_nav_arrow_icon " />

@@ -5,6 +5,10 @@ import { useStateValue } from "../../State";
 import { Link } from "react-router-dom";
 import CartProduct from "../cartProduct/CartProduct";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 function Payment() {
   const [{ basket }, dispatch] = useStateValue();
 
@@ -54,7 +58,9 @@ function Payment() {
             <h2>Payment Method</h2>
 
             <div className="payment_method_buttons">
-              <button className="payment_method_button">
+              <button className="payment_method_button" onClick={()=>(
+    toast.success(`㊗️Congratulations! Order has Placed`, {
+      position: "top-center"}))}>
                 Pay on delievery{" "}
               </button>
               <a href=" https://rzp.io/l/H00VZ9vRc">
@@ -65,6 +71,7 @@ function Payment() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

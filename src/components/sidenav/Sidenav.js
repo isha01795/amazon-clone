@@ -16,7 +16,7 @@ function Sidenav(props ) {
             <AccountCircleIcon style={{fontSize:'2.5rem', marginRight:"5px"}}/>
             {user === "Sign in" ?
             <Link to="/Login" style={{ textDecoration: "none" }}>
-            Hello,{user}
+            Hello,Sign in
             </Link>:
             <Link to="/Logout" style={{ textDecoration: "none" }}>
             Hello,{user}

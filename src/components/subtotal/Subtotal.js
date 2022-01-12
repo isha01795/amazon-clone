@@ -4,6 +4,8 @@ import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../../State";
 import { getBasketTotal } from "../../reducer";
 import { useHistory } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Subtotal() {
   const history = useHistory();
@@ -12,7 +14,9 @@ function Subtotal() {
     if(basket?.length >= 1)
     { history.push("/payment")}
     else
-    { alert("Select an item first.")}
+    { 
+    toast.error(`Select an item first`, {
+      position: "top-center"})}
   }
 
   return (
@@ -36,6 +40,7 @@ function Subtotal() {
         prefix={"$"}
       />
       <button onClick={ redirect}>Proceed to Buy</button>
+      <ToastContainer />
     </div>
   );
 }

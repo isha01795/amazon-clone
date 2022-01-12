@@ -5,6 +5,10 @@ import Sidenav from "../sidenav/Sidenav";
 import Product from "../product/Product";
 import Home from "../home/Home";
 import Api from "../../Api.json";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function Subheader() {
   const [clas, setClas] = useState("hide");
@@ -98,6 +102,8 @@ function Subheader() {
             })
           : null}
       </div>
+      <ToastContainer />
+
     </>
   );
 }

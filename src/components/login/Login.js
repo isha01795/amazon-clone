@@ -3,8 +3,10 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../State";
 
+
+
 function Login() {
-  const [{ user }, dispatch] = useStateValue();
+  // const [{ user }, dispatch] = useStateValue();
   const [email, setEmail] = useState("");
   // console.log(user);
 
@@ -13,13 +15,20 @@ function Login() {
   };
 
   const setUser = () => {
+
+    
+  
     const username = email;
-    //    console.log(username);
-    dispatch({
-      type: "ADD_USER",
-      user: username,
-    });
+    //   //  console.log(username);
+    // dispatch({
+    //   type: "ADD_USER",
+    //   user: username,
+    // });
+
+    
     // console.log(user);
+
+    
   };
   const submit = (e) => {
     e.preventDefault();
@@ -51,9 +60,12 @@ function Login() {
 
           <h4>Password</h4>
           <input type="password" className="login_input" required />
+         <Link to='./amazon-clone'>
           <button className="sign_in_button" onClick={setUser}>
             Sign In
-          </button>
+          </button> 
+    
+          </Link>
         </form>
         <p>
           By continuing, you agree to Amazon's Conditions of Use and Privacy
@@ -66,6 +78,7 @@ function Login() {
           </button>{" "}
         </Link>
       </div>
+     
     </div>
   );
 }

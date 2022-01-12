@@ -53,8 +53,7 @@ function App() {
 
 
         <Route  exact path= "/item" component={Item}/>
-         {/* <Item/> */}
-         {/* </Route> */}
+      
 
         <Route  exact path="/amazon-clone">
 
